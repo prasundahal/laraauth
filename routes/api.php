@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 // Route::resource('products',ProductController::class);
 //public
 
+// Route::get('/addyourcv',[CvController::class, 'cvadd']);
+
 Route::post('/register',[AuthController::class, 'register']);
 Route::post('/login',[AuthController::class, 'login']);
 Route::get('products/search/{name}',[ProductController::class,'search']);
