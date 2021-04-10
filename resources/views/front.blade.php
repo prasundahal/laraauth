@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Register Forms </title>
 
     <!-- Icons font CSS-->
     <link href="front/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -27,13 +27,20 @@
 </head>
 
 <body>
+
+
     <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
         <div class="wrapper wrapper--w680">
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Registration Info</h2>
-                    <form action="{{ route('frontcv.store') }}" method="POST">
+                    <h2 class="title">Registration Completed we will send you an email</h2>
+                    @if ($message = Session::get('success'))
+                    <div class="alert alert-success">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
+                    {{-- <form action="{{ route('frontcv.store') }}" method="POST">
                         <div class="input-group">
                             <input class="input--style-1" type="text" placeholder="NAME" name="name">
                         </div>
@@ -88,7 +95,7 @@
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-1" type="file" placeholder="cv" name="image">
+                                    <input class="input--style-1" type="text" placeholder="cv" name="image">
                                 </div>
                             </div>
                         </div>
@@ -96,7 +103,7 @@
                         <div class="p-t-20">
                             <button class="btn btn--radius btn--green" type="submit">Submit</button>
                         </div>
-                    </form>
+                    </form> --}}
                 </div>
             </div>
         </div>

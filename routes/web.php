@@ -17,6 +17,10 @@ use App\Http\Controllers\FrontController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/addcv', function () {
+    return view('welcome1');
+});
+// Route::get('success',[FrontController::class, 'index'])->name('front.index');
 Route::get('/', [FrontController::class, 'index'])->name('front');
 Route::resource('persons', PersonController::class);
 Route::get('persons/create', [PersonController::class, 'create'])->name('cvs.create');

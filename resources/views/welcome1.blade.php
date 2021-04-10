@@ -23,7 +23,7 @@
     </div>
 @endif
 
-<form action="{{ route('cvs.store') }}" enctype="multipart/form-data" method="POST">
+<form action="{{ route('frontcv.store') }}" enctype="multipart/form-data" method="POST">
     @csrf
 
      <div class="row">

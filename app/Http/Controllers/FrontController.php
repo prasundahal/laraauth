@@ -47,10 +47,27 @@ class FrontController extends Controller
             'image' => 'required',
         ]);
 
-        Person::create($request->all());
+        $image = $request->file('image');
 
-        return redirect()->route('front')
-                        ->with('success','Cv created successfully.');
+        $new_name = rand() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('images'), $new_name);
+        $form_data = array(
+
+
+            'email' => $request->email,
+            'name' =>$request->name,
+            'phone' => $request->phone,
+            'social' => $request->social,
+            'yearexp' => $request->yearexp,
+            'exp' => $request->exp,
+            'price' => $request->price,
+            'image'            =>   $new_name
+        );
+
+        Person::create($form_data);
+
+         return redirect()->route('front')
+        ->with('success','Cv created successfully.');
     }
 
     /**

@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class PersonController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +19,7 @@ class PersonController extends Controller
     public function index()
     {
 
-        $cvs = Person::latest()->paginate(5);
+        $cvs = Person::latest()->paginate(100);
 
         return view('cvs.index',compact('cvs'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -50,10 +54,27 @@ class PersonController extends Controller
             'image' => 'required',
         ]);
 
-        Person::create($request->all());
+        $image = $request->file('image');
+
+        $new_name = rand() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('images'), $new_name);
+        $form_data = array(
+
+
+            'email' => $request->email,
+            'name' =>$request->name,
+            'phone' => $request->phone,
+            'social' => $request->social,
+            'yearexp' => $request->yearexp,
+            'exp' => $request->exp,
+            'price' => $request->price,
+            'image'            =>   $new_name
+        );
+
+        Person::create($form_data);
 
         return redirect()->route('cvs.index')
-                        ->with('success','Cv created successfully.');
+        ->with('success','Cv created successfully.');
     }
 
 
