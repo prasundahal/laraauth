@@ -25,14 +25,15 @@ Route::get('/addcv', function () {
 });
 // Route::get('success',[FrontController::class, 'index'])->name('front.index');
 Route::get('/', [FrontController::class, 'index'])->name('front');
-Route::resource('persons', PersonController::class);
+Route::post('add/store', [FrontController::class, 'store'])->name('frontcv.store');
+Route::get('addcv', [FrontController::class, 'create'])->name('addcv');
+// Route::resource('persons', PersonController::class);
 Route::get('persons/create', [PersonController::class, 'create'])->name('cvs.create');
 Route::post('persons/store', [PersonController::class, 'store'])->name('cvs.store');
 Route::get('persons',[PersonController::class, 'index'])->name('cvs.index');
 Route::delete('/persons/{id}',[PersonController::class, 'delete'])->name('cvs.destroy');
 Route::get('/persons/{id}',[PersonController::class, 'show'])->name('cvs.show');
 Route::put('/products/{id}',[PersonController::class, 'edit'])->name('cvs.edit');
-Route::post('add/store', [FrontController::class, 'store'])->name('frontcv.store');
 
 Auth::routes();
 

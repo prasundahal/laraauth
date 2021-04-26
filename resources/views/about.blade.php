@@ -24,7 +24,7 @@
             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <a href="#" class="btn-learn-more">Learn More</a>
+          <a href="{{ route('addcv') }}" class="btn-learn-more">Add Your Skill Now</a>
         </div>
       </div>
 

@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
 
-                            <strong> <a href="https://icofont.com/icons">Icon</strong></a>
+                            <strong> <a href="https://boxicons.com/">Icon-> font (bx bxl-python)Copy This)</strong></a>
                             <input type="text" name="icon" class="form-control" placeholder="Icon">
                         </div>
 
@@ -52,11 +52,11 @@
                             <input type="file" name="image" class="form-control">
                         </div> --}}
                         <div class="form-group">
-                            <strong> App Link</strong>
+                            <strong> Page Link</strong>
                             <input name="link" class="form-control"  placeholder="Android Link">
                         </div>
                         <div class="form-group">
-                            <strong> About</strong>
+                            <strong> About this Service</strong>
                             <textarea name="about" class="form-control"  placeholder="About"></textarea>
                         </div>
 
