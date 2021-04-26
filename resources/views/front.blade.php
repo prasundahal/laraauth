@@ -1,3 +1,9 @@
+
+@php
+$settings = DB::table('settings')->first();
+$banners = DB::table('banners')->first();
+
+@endphp
 @extends('layouts.front')
 
 @section('content')

@@ -3,7 +3,7 @@
 
       <div class="section-title">
         <h2>Contact</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>{{$settings->about}}</p>
       </div>
     </div>
 
@@ -20,19 +20,19 @@
             <div class="address">
               <i class="ri-map-pin-line"></i>
               <h4>Location:</h4>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <p>{{$settings->company_location}}</p>
             </div>
 
             <div class="email">
               <i class="ri-mail-line"></i>
               <h4>Email:</h4>
-              <p>info@example.com</p>
+              <p>{{$settings->email}}</p>
             </div>
 
             <div class="phone">
               <i class="ri-phone-line"></i>
               <h4>Call:</h4>
-              <p>+1 5589 55488 55s</p>
+              <p>{{$settings->phone_number}}</p>
             </div>
 
           </div>
