@@ -5032,16 +5032,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v9.17.1",
+            "version": "v9.17.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "53b3f8532b5021ffda813a8a54ecca121834ddb7"
+                "reference": "a970ba1159df6940a87fabcf44f571ef14b57927"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/53b3f8532b5021ffda813a8a54ecca121834ddb7",
-                "reference": "53b3f8532b5021ffda813a8a54ecca121834ddb7",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/a970ba1159df6940a87fabcf44f571ef14b57927",
+                "reference": "a970ba1159df6940a87fabcf44f571ef14b57927",
                 "shasum": ""
             },
             "require": {
@@ -5101,7 +5101,7 @@
             ],
             "support": {
                 "issues": "https://github.com/yajra/laravel-datatables/issues",
-                "source": "https://github.com/yajra/laravel-datatables/tree/v9.17.1"
+                "source": "https://github.com/yajra/laravel-datatables/tree/v9.17.2"
             },
             "funding": [
                 {
@@ -5113,7 +5113,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-03-23T01:32:51+00:00"
+            "time": "2021-04-12T04:03:34+00:00"
         }
     ],
     "packages-dev": [
