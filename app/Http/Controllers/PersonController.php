@@ -143,4 +143,8 @@ class PersonController extends Controller
         return redirect()->route('cvs.index')
                         ->with('success','cv deleted successfully');
     }
+    public function search($name)
+    {
+       return Person::where('name','like','%'.$name.'%')->get();
+    }
 }
