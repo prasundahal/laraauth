@@ -31,8 +31,8 @@ $banners = DB::table('banners')->first();
           <div class="row mt-5">
     
             <div class="col-lg-8 mt-5 mt-lg-0">
-    
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="{{ route('cvs.store') }}" enctype="multipart/form-data" method="POST"role="form" class="php-email-form">
+                @csrf
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -46,7 +46,7 @@ $banners = DB::table('banners')->first();
                       <input type="text" name="phone" class="form-control" id="phone" placeholder="Your Phone Number" required>
                     </div>
                     <div class="col-md-6 form-group">
-                        <select class="form-control" id="select" >
+                        <select class="form-control" id="select" name="social" >
                             <option value="" disabled selected hidden>Where did you find us?</option>
                             <option>Fb</option>
                             <option>Ins</option>
@@ -57,7 +57,7 @@ $banners = DB::table('banners')->first();
 
                 <div class="row mt-3">
                     <div class="col-md-6 form-group">
-                      <input type="text" name="experience" class="form-control" id="experience" placeholder="Your work experience" required>
+                      <input type="text" name="yearexp" class="form-control" id="experience" placeholder="Your work experience" required>
                     </div>
                     <div class="col-md-6 form-group">
                         <input type="text" name="price" class="form-control" id="price" placeholder="Your project Pay" required>
@@ -71,7 +71,7 @@ $banners = DB::table('banners')->first();
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-left"><button type="submit">Submit</button></div>
               </form>
             </div>
           </div>
