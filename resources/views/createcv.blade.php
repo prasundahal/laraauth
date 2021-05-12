@@ -21,42 +21,14 @@ $banners = DB::table('banners')->first();
         <div class="container">
     
           <div class="section-title">
-            <h2>Contact</h2>
+            <h2>Add Your Details</h2>
             <p>{{$settings->about}}</p>
           </div>
-        </div>
-    
-        <div>
-          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
         </div>
     
         <div class="container">
     
           <div class="row mt-5">
-    
-            <div class="col-lg-4">
-              <div class="info">
-                <div class="address">
-                  <i class="ri-map-pin-line"></i>
-                  <h4>Location:</h4>
-                  <p>{{$settings->company_location}}</p>
-                </div>
-    
-                <div class="email">
-                  <i class="ri-mail-line"></i>
-                  <h4>Email:</h4>
-                  <p>{{$settings->email}}</p>
-                </div>
-    
-                <div class="phone">
-                  <i class="ri-phone-line"></i>
-                  <h4>Call:</h4>
-                  <p>{{$settings->phone_number}}</p>
-                </div>
-    
-              </div>
-    
-            </div>
     
             <div class="col-lg-8 mt-5 mt-lg-0">
     
@@ -69,11 +41,30 @@ $banners = DB::table('banners')->first();
                     <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                   </div>
                 </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <div class="row mt-3">
+                    <div class="col-md-6 form-group">
+                      <input type="text" name="phone" class="form-control" id="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <select class="form-control" id="select" >
+                            <option value="" disabled selected hidden>Where did you find us?</option>
+                            <option>Fb</option>
+                            <option>Ins</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6 form-group">
+                      <input type="text" name="experience" class="form-control" id="experience" placeholder="Your work experience" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="price" class="form-control" id="price" placeholder="Your project Pay" required>
+                    </div> 
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                    <input type="file" class="form-control" name="image" id="file" placeholder="Your Resume" required>
                 </div>
                 <div class="my-3">
                   <div class="loading">Loading</div>
@@ -94,3 +85,78 @@ $banners = DB::table('banners')->first();
 
 
 @endsection
+
+
+{{-- 
+<form action="{{ route('cvs.store') }}" enctype="multipart/form-data" method="POST">
+    @csrf
+
+     <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>email:</strong>
+                <input type="text" name="email" class="form-control" placeholder="email">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Name:</strong>
+                <input type="text" name="name" class="form-control" placeholder="Name">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>phone:</strong>
+                <input type="number" name=" " class="form-control" placeholder="phone">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>social:</strong>
+                <select name="social">
+                    <option disabled="disabled" selected="selected">WHERE ARE U?</option>
+                    <option>Fb</option>
+                    <option>Ins</option>
+                    <option>Other</option>
+                </select>
+                <input type="text" name="social" class="form-control" placeholder="social">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>yearexp:</strong>
+                <select name="yearexp">
+                    <option disabled="disabled" selected="selected">Expwreince year</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>exp:</strong>
+                <input type="text" name="exp" class="form-control" placeholder="exp">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>price:</strong>
+                <input type="text" name="price" class="form-control" placeholder="price">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>image:</strong>
+                <input type="file" name="image" class="form-control" placeholder="image">
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+</form> --}}
