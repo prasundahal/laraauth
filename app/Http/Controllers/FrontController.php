@@ -97,7 +97,7 @@ class FrontController extends Controller
 
         Person::create($form_data);
 
-         return redirect()->route('front')
+         return redirect()->route('addcv')
         ->with('success','Cv created successfully.');
     }
 

@@ -5,34 +5,41 @@ $settings = DB::table('settings')->first();
 $banners = DB::table('banners')->first();
 
 @endphp
-@extends('layouts.front')
 
+@extends('layouts.in')
 @section('content')
-
-  <!-- ======= Header ======= -->
-
-  @include('nav')
-  <!-- ======= Hero Section ======= -->
-
-
-  <main id="main">
 
     <section id="contact" class="contact">
         <div class="container">
-    
+
           <div class="section-title">
             <h2>Add Your Details</h2>
             <p>{{$settings->about}}</p>
           </div>
         </div>
-    
+
         <div class="container">
-    
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
+
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
           <div class="row mt-5">
-    
+
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form action="{{ route('cvs.store') }}" enctype="multipart/form-data" method="POST"role="form" class="php-email-form">
-                @csrf
+                <form action="{{ route('frontcv.store') }}" enctype="multipart/form-data" method="POST" autocomplete="on" class="form" id="formLogin" name="formLogin" role="form">
+                    @csrf
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -61,7 +68,10 @@ $banners = DB::table('banners')->first();
                     </div>
                     <div class="col-md-6 form-group">
                         <input type="text" name="price" class="form-control" id="price" placeholder="Your project Pay" required>
-                    </div> 
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="exp" class="form-control" id="exp" placeholder="Your Exp" required>
+                    </div>
                 </div>
                 <div class="form-group mt-3">
                     <input type="file" class="form-control" name="image" id="file" placeholder="Your Resume" required>
@@ -75,88 +85,16 @@ $banners = DB::table('banners')->first();
               </form>
             </div>
           </div>
-    
+
         </div>
       </section><!-- End Contact Section -->
-    
 
 
-</main><!-- End #main -->
+
+
 
 
 @endsection
 
 
-{{-- 
-<form action="{{ route('cvs.store') }}" enctype="multipart/form-data" method="POST">
-    @csrf
 
-     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>email:</strong>
-                <input type="text" name="email" class="form-control" placeholder="email">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>phone:</strong>
-                <input type="number" name=" " class="form-control" placeholder="phone">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>social:</strong>
-                <select name="social">
-                    <option disabled="disabled" selected="selected">WHERE ARE U?</option>
-                    <option>Fb</option>
-                    <option>Ins</option>
-                    <option>Other</option>
-                </select>
-                <input type="text" name="social" class="form-control" placeholder="social">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>yearexp:</strong>
-                <select name="yearexp">
-                    <option disabled="disabled" selected="selected">Expwreince year</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>exp:</strong>
-                <input type="text" name="exp" class="form-control" placeholder="exp">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>price:</strong>
-                <input type="text" name="price" class="form-control" placeholder="price">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>image:</strong>
-                <input type="file" name="image" class="form-control" placeholder="image">
-            </div>
-        </div>
-
-
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </div>
-
-</form> --}}
