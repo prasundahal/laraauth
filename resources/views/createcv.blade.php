@@ -1,5 +1,6 @@
 
 
+
 @php
 $settings = DB::table('settings')->first();
 $banners = DB::table('banners')->first();
@@ -70,18 +71,18 @@ $banners = DB::table('banners')->first();
                         <input type="text" name="price" class="form-control" id="price" placeholder="Your project Pay" required>
                     </div>
                     <div class="col-md-6 form-group">
-                        <input type="text" name="exp" class="form-control" id="exp" placeholder="Your Exp" required>
+                        <input type="text" name="exp" class="form-control" id="exp" data-default="add aasd tag" placeholder="Your asd" required>
                     </div>
                 </div>
                 <div class="form-group mt-3">
                     <input type="file" class="form-control" name="image" id="file" placeholder="Your Resume" required>
                 </div>
-                <div class="my-3">
+                {{-- <div class="my-3">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-left"><button type="submit">Submit</button></div>
+                </div> --}}
+                <div class="text-left" style="margin-top:15px "><button type="submit">Submit</button></div>
               </form>
             </div>
           </div>
@@ -90,7 +91,12 @@ $banners = DB::table('banners')->first();
       </section><!-- End Contact Section -->
 
 
-
+      <script type="text/javascript">
+        $('#exp').tagsInput({ 
+          defaultText: 'Technologies you Know',
+          width: ' 100% '
+        });
+      </script>
 
 
 

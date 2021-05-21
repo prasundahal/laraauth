@@ -1560,3 +1560,12 @@ section {
 #footer .credits a:hover {
     color: #009961;
 }
+
+.tagsinput {
+    margin-top: 15px;
+}
+
+#exp_tag {
+    width: 100%;
+    font-size: 14px;
+}
