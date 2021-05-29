@@ -6,7 +6,7 @@
           <h2>{{ $banners->subheading }}</h2>
           {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a> --}}
 
-          <a href="{{ route('addcv') }}" class="get-started-btn scrollto">Add cv</a>
+          <a href="{{ route('addcv') }}" class="get-started-btn scrollto">Apply NOW  </a>
         </div>
       </div>
     </div>

@@ -82,7 +82,7 @@ $banners = DB::table('banners')->first();
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div> --}}
-                <div class="text-left" style="margin-top:15px "><button type="submit">Submit</button></div>
+                <div class="text-left" style="margin-top:15px "><button type="submit" class="btn btn-success">Submit</button></div>
               </form>
             </div>
           </div>
@@ -92,7 +92,7 @@ $banners = DB::table('banners')->first();
 
 
       <script type="text/javascript">
-        $('#exp').tagsInput({ 
+        $('#exp').tagsInput({
           defaultText: 'Technologies you Know',
           width: ' 100% '
         });
