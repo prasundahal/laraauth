@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Setting;
-
+use Spatie\PdfToText\Pdf;
 class HomeController extends Controller
 {
     /**
@@ -33,6 +33,12 @@ class HomeController extends Controller
         return view('admin.setting', compact('settings'));
     }
 
+public function pdfconverter(Request $request)
+    {
+    $path = 'c:/Program Files/Git/mingw64/bin/pdftotext';
+    $text = Pdf::getText('book.pdf', $path);
+    dd($text);
+    }
     public function updateSettings(Request $request)
     {
         $settings = Setting::find(1);

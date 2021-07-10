@@ -17,6 +17,7 @@
         "laravel/socialite": "^5.2",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
+        "spatie/pdf-to-text": "^1.4",
         "yajra/laravel-datatables-oracle": "^9.17"
     },
     "require-dev": {

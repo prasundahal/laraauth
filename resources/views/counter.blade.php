@@ -3,7 +3,7 @@
 
       <div class="text-center title">
         <h3>What we have achieved so far</h3>
-        <p>Iusto et labore modi qui sapiente xpedita tempora et aut non ipsum consequatur illo.</p>
+        <p></p>
       </div>
 
       <div class="row counters position-relative">
@@ -14,17 +14,17 @@
         </div>
 
         <div class="col-lg-3 col-6 text-center">
-          <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+          <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
           <p>Projects</p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
-          <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+          <span data-purecounter-start="0" data-purecounter-end="24/7" data-purecounter-duration="1" class="purecounter"></span>
           <p>Hours Of Support</p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
-          <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+          <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
           <p>Hard Workers</p>
         </div>
 

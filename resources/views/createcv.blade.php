@@ -56,8 +56,8 @@ $banners = DB::table('banners')->first();
                     <div class="col-md-6 form-group">
                         <select class="form-control" id="select" name="social" >
                             <option value="" disabled selected hidden>Where did you find us?</option>
-                            <option>Fb</option>
-                            <option>Ins</option>
+                            <option>Facebook</option>
+                            <option>Instagram</option>
                             <option>Other</option>
                         </select>
                     </div>
@@ -71,17 +71,15 @@ $banners = DB::table('banners')->first();
                         <input type="text" name="price" class="form-control" id="price" placeholder="Your project Pay" required>
                     </div>
                     <div class="col-md-6 form-group">
+
                         <input type="text" name="exp" class="form-control" id="exp" data-default="add aasd tag" placeholder="Your asd" required>
                     </div>
                 </div>
                 <div class="form-group mt-3">
+
                     <input type="file" class="form-control" name="image" id="file" placeholder="Your Resume" required>
                 </div>
-                {{-- <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div> --}}
+
                 <div class="text-left" style="margin-top:15px "><button type="submit" class="btn btn-success">Submit</button></div>
               </form>
             </div>
@@ -93,7 +91,7 @@ $banners = DB::table('banners')->first();
 
       <script type="text/javascript">
         $('#exp').tagsInput({
-          defaultText: 'Technologies you Know',
+          defaultText: 'Technologies you Know , ',
           width: ' 100% '
         });
       </script>

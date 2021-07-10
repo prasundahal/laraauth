@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Spatie\PdfToText\Pdf;
 use App\Models\Front;
 use App\Models\Person;
 use App\Models\Banner;
@@ -20,6 +20,13 @@ class FrontController extends Controller
      */
     public function index()
     {
+
+
+
+//         $path = 'c:/Program Files/Git/mingw64/bin/pdftotext';
+//         $text = Pdf::getText('book.pdf', $path);
+// dd($text);
+
         $blogs=Blog::all();
         $markets=Market::all();
         $services=Service::all();
